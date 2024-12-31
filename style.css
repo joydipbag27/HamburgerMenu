@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins';
+    background-color: rgb(253, 244, 232);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+img{
+    cursor: pointer;
+}
+.page{
+    height: 100vh;
+    width: 98.9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    height: 15%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 3vw;
+}
+.logo{
+    width: 10%;
+}
+.logo img{
+    display: block;
+    width: 70%;
+}
+.buttons{
+    display: flex;
+    gap: 4vw;
+}
+.buttons a{
+    font-size: 1.2vw;
+    text-decoration: none;
+    font-weight: 600;
+    color: #492118;
+}
+.buttons a:hover{
+    opacity: 40%;
+    transition: all ease-in .1s;
+    cursor: pointer;
+}
+.menu-icon{
+    display: none;
+}
+.popup-menu{
+    display: none;
+}
+.main-section{
+    height: 85%;
+    width: 100%;
+    align-content: center;
+}
+.images-div{
+    display: flex;
+    padding: 0vh 5vw;
+    margin-top: 8vh;
+    overflow: hidden;
+}
+.images-div img{
+    height: auto;
+    width: 20%;
+    object-fit: cover;
+}
+.images-div img:hover{
+    transition: all ease .3s;
+    opacity: 90%;
+}
+.main-section p{
+    font-size: 1.3vw;
+    padding: 4vh 0vw;
+    text-align: center;
+}
+.page h2{
+    font-size: 2vw;
+    margin-bottom: 5vh;
+}
+.img-box{
+    height: 70%;
+    width: 60%;
+    overflow: hidden;
+    /* background-color: aqua; */
+}
+.img-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;  
+}
+.img-box img:hover{
+    scale: 1.1;
+    transition: all ease-in-out 0.3s;
+}
+.goToTop{
+    display: block;
+    font-size: 1.5vw;
+    text-align: end;
+    margin: 8vh 5vw;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    color: #492118;
+}
+.goToTop:hover{
+    color: blue;
+}
+h4{
+    font-size: 1vw;
+    text-align: center;
+    padding-bottom: 6vh;
+}
+@media (max-width: 600px) {
+    .page{
+        height: fit-content;
+    }
+    #p1{
+        height: 50vh;
+    }
+    .header{
+        position: fixed;
+        top: 0%;
+        backdrop-filter: blur(20px);
+        height: 10%;
+        width: 100%;
+        background-color: rgba(253, 244, 232, 0.204);
+        padding: 5vh 4vw;
+        
+    }
+    .header a{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        font-size: 5vw;
+    }
+    .popup-menu{
+        position: absolute;
+        padding: 5vw;
+        right: -60%;
+        top: 0%;
+        height: 35vh;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-color: rgba(255, 255, 255, 0.909);
+        transition: right 0.25s ease-in-out;
+    }
+    /* toggle classes */
+    
+    .menu-icon-hide{
+        display: none;
+    }
+    .popup-menu-open{
+        right: 0%;
+    }
+
+    .popup-menu a{
+        display: block;
+        color: #492118;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .ri-close-fill{
+        align-self: end;
+        font-size: 6vw;
+    }
+    .main-section{
+        margin-top: 10vh;
+        height: 90%;
+        width: 100%;
+        align-content: center;
+    }
+    .logo{
+        width: 18vw;
+        /* background-color: red; */
+    }
+    .logo img{
+        display: block;
+        width: 100%;
+    }
+    .images-div :nth-last-child(1){
+        display: none;
+    }
+    .images-div{
+        display: flex;
+        padding: 0vh 5vw;
+        margin-top: 0vh;
+        overflow: hidden;
+    }
+    .images-div img{
+        height: 30vh;
+        width: 25%;
+    }
+    .main-section p{
+        font-size: 3vw;
+        padding: 3vh 0vw;
+    }
+    .page h2{
+        font-size: 5vw;
+        margin-bottom: 3vh;
+        margin-top: 3vh;
+        height: 20%;
+    }
+    .img-box{
+        height: 30vh;
+        width: 80%;
+        overflow: hidden;
+        /* background-color: aqua; */
+    }
+    .img-box img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;  
+    }
+    .goToTop{
+        font-size: 4vw;
+        text-align: right;
+        margin: 4vh 5vw;
+        cursor: pointer;
+    }
+    h4{
+        font-size: 2.5vw;
+    }
+    
+}
