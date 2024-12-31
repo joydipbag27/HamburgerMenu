@@ -1,14 +1,19 @@
 const menu = document.querySelector(".menu-icon");
+const header = document.querySelector(".header");
 const popupMenu = document.querySelector(".popup-menu");
 const closeIcon = document.querySelector(".ri-close-fill");
 
 menu.addEventListener("click", (e) => {
-  e.stopPropagation()
+  e.stopPropagation();
   popupMenu.classList.add("popup-menu-open");
   menu.classList.add("menu-icon-hide");
 });
 
-closeIcon.addEventListener("click", () => {
+popupMenu.addEventListener('click', (e) =>{
+  e.stopPropagation()
+})
+
+closeIcon.addEventListener("click", (e) => {
   if (
     popupMenu.classList.contains("popup-menu-open") &&
     menu.classList.contains("menu-icon-hide")
@@ -18,7 +23,7 @@ closeIcon.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("click", () => {
+window.addEventListener("click", (e) => {
   if (
     popupMenu.classList.contains("popup-menu-open") &&
     menu.classList.contains("menu-icon-hide")
